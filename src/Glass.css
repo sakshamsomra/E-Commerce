@@ -1,0 +1,63 @@
+.cardg {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    background: rgb(154, 231, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .cont{
+    display: flex;
+  justify-content: center;
+
+  }
+  
+  .cardg::before,
+  .cardg::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(154, 221, 168);
+    transition: all 0.5s;
+  }
+  
+  .cardg::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .cardg::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  .cardg:hover::before,
+  .cardg:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .cardg:hover:after {
+    content: "More";
+  }
