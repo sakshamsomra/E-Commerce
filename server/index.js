@@ -84,7 +84,7 @@ app.get('/api/get', (req, res) => {
 });
 
 
-app.get('/', (req, res) => {
+app.GET('/', (req, res) => {
  
   let sqlQuery = "SELECT * FROM categories";
 
