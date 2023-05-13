@@ -86,7 +86,13 @@ app.get('/api/get', (req, res) => {
 
 app.get('/', (req, res) => {
  
-    res.send("hello");
+  let sqlQuery = "SELECT * FROM categories";
+
+  let query = conn.query(sqlQuery, (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+
   
 });
 
