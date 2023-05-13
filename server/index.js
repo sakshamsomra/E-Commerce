@@ -84,6 +84,13 @@ app.get('/api/get', (req, res) => {
 });
 
 
+app.get('/', (req, res) => {
+ 
+    res.send("hello");
+  
+});
+
+
 app.get('/api/getcart', (req, res) => {
   let sqlQuery = "SELECT * FROM cart";
 
