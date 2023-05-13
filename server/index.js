@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors({
   origin: ["sql12.freesqldatabase.com"],
-  methods: ["GET", "POST"],
+  methods: ["get", "post"],
   credentials: true
 }));
 
