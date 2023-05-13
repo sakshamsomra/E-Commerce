@@ -74,7 +74,7 @@ const upload = multer({ storage: storage });
 
 
 
-app.GET('/api/get', (req, res) => {
+app.get('/api/get', (req, res) => {
   let sqlQuery = "SELECT * FROM categories";
 
   let query = conn.query(sqlQuery, (err, results) => {
