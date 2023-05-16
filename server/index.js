@@ -25,8 +25,8 @@ const isValidEmail = emailValidator.validate('example@email.com');
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors({
-  origin: ["sql12.freesqldatabase.com"],
-  methods: ["get", "post"],
+  origin: ["http://localhost:3001"],
+  methods: ["GET", "Post"],
   credentials: true
 }));
 
