@@ -25,8 +25,8 @@ const isValidEmail = emailValidator.validate('example@email.com');
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:3001"],
-  methods: ["GET", "Post"],
+  origin: ["http://localhost:3000"],
+  methods: ["GET", "POST"],
   credentials: true
 }));
 
@@ -44,11 +44,13 @@ app.use(session({
 
 
 const conn = mysql.createConnection({
-  host: 'sql12.freesqldatabase.com',
-  user: 'sql12617402',
-  password: 'tVlvaiAxXL',
-  database: 'sql12617402',
-  port: '3306'
+  host: 'db4free.net',
+  user: 'saksham',
+  password: 'chicago1@',
+  database: 'somradata',
+  port: '3306',
+  insecureAuth : true
+
 });
 
 conn.connect((err) => {
@@ -81,19 +83,6 @@ app.get('/api/get', (req, res) => {
     if (err) throw err;
     res.send(results);
   });
-});
-
-
-app.get('/', (req, res) => {
- 
-  let sqlQuery = "SELECT * FROM categories";
-
-  let query = conn.query(sqlQuery, (err, results) => {
-    if (err) throw err;
-    res.send(results);
-  });
-
-  
 });
 
 
@@ -244,13 +233,11 @@ function apires(results) {
   return JSON.stringify({ "status": 200, "error": null, "res": results });
 }
 
-
-app.listen(3000);
-
-
 /*------------------------------------------
 --------------------------------------------
 Server listening
 --------------------------------------------
 --------------------------------------------*/
 
+
+app.listen(3000);
