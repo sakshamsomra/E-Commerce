@@ -26,7 +26,7 @@ export default function Landing() {
         formData.append('password', password);
        
 
-        axios.post("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/login", formData).then((response) => {
+        axios.post("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/login", formData).then((response) => {
             if (response.data.message) {
                 alert(response.data.message);
             }
@@ -61,7 +61,7 @@ export default function Landing() {
 
     useEffect( () => {
 
-        axios.get("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/login").then((response) => {
+        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/login").then((response) => {
             console.log(response);
         })
 
