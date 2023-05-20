@@ -21,7 +21,7 @@ export default function Signup() {
         form.append('username', username);
         form.append('password', password);
 
-        axios.post("https://e-commerce-server-lake.vercel.app//api/users", form).then(() => {
+        axios.post("https://e-commerce-server-lake.vercel.app/api/users", form).then(() => {
             alert('success for insert');
         })
 
