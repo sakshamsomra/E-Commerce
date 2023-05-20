@@ -33,7 +33,7 @@ export default function Home() {
         formData.append('qty', qty);
         formData.append('id', id);
 
-        axios.post("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/addcart", formData).then(() => {
+        axios.post("https://e-commerce-server-lake.vercel.app/api/addcart", formData).then(() => {
             alert('added to cart')
         })
 
@@ -45,7 +45,7 @@ export default function Home() {
 
 
     useEffect(() => {
-        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/get").then((response) => {
+        axios.get("https://e-commerce-server-lake.vercel.app/api/get").then((response) => {
 
 
             setList(response.data);
@@ -64,7 +64,7 @@ export default function Home() {
 
     useEffect(() => {
 
-        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/login").then((response) => {
+        axios.get("https://e-commerce-server-lake.vercel.app/api/login").then((response) => {
             console.log(response);
         })
 
