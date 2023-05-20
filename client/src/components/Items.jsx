@@ -11,7 +11,7 @@ export default function Items() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        axios.get("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/get").then((response) => {
+        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/get").then((response) => {
 
 
             setList(response.data);
