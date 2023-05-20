@@ -117,7 +117,7 @@ app.post("/api/items", upload.single('file'), (req, res) => {
 
 
 
-app.post("/api/users", (req, res) => {
+app.post("/api/users",upload.single('file'), (req, res) => {
   let data = { email: req.body.email, username: req.body.username, password: req.body.password };
 
   let sqlQuery = "INSERT INTO user SET ?";
@@ -135,7 +135,7 @@ app.post("/api/users", (req, res) => {
 });
 
 
-app.post("/api/addcart", (req, res) => {
+app.post("/api/addcart",upload.single('file'), (req, res) => {
   let data = { name: req.body.name, price: req.body.price};
 
   let qty = req.body.qty;
@@ -169,7 +169,7 @@ app.get("/api/login", (req,res) => {
   }
 })
 
-app.post("/api/login", (req, res) => {
+app.post("/api/login",upload.single('file'), (req, res) => {
   username = req.body.username;
   password = req.body.password;
 
@@ -197,7 +197,7 @@ app.post("/api/login", (req, res) => {
 });
 
 
-app.post("/api/logout", (req,res) => {
+app.post("/api/logout",upload.single('file'), (req,res) => {
 
 
   let sqlQuery = "DELETE FROM cart";
