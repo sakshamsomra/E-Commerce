@@ -15,7 +15,7 @@ export default function Navbar() {
     const [user, setUser] = useState([]);
 
     useEffect(() => {
-        axios.get("https://e-commerce-server-1ez1bs98v-sakshamsomra.vercel.app/api/username").then((response) => {
+        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/username").then((response) => {
 
 
             setUser(response.data);
@@ -27,7 +27,7 @@ export default function Navbar() {
 
     const log = () => {
 
-        axios.post("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/logout", {
+        axios.post("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/logout", {
 
 
         }).then((response) => {
