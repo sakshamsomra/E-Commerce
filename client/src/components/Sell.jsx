@@ -32,7 +32,7 @@ export default function Sell() {
     formData.append('qty', qty);
 
 
-    axios.post("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/items",formData).then(() => {
+    axios.post("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/items",formData).then(() => {
       alert('success for insert')
     })
 
