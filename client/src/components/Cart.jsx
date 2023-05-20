@@ -11,7 +11,7 @@ export default function Cart() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get("https://e-commerce-server-olk6mw61t-sakshamsomra.vercel.app/api/getcart").then((response) => {
+        axios.get("https://e-commerce-server-ewfplxmpn-sakshamsomra.vercel.app/api/getcart").then((response) => {
 
 
             setList(response.data);
