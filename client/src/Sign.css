@@ -22,11 +22,11 @@
           -16px -16px 32px ;
     border-radius: 8px;
 
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 30%);
-    scale: 130%;
+    
+    
+    transform: translate(0%, 30%);
+    scale: 110%;
+    margin: auto;
 
 
     
