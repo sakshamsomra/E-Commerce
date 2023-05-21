@@ -1,63 +1,84 @@
-.cardg {
+  .container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .card_box {
+    width: 50%;
+    height: 250px;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(141, 180, 104, 0.623) 0%, rgb(25, 59, 19) 100%);
     position: relative;
-    width: 220px;
-    height: 320px;
-    background: rgb(154, 231, 171);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     cursor: pointer;
-    margin: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 2%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .cont{
-    display: flex;
-  justify-content: center;
-
+    transition: all .3s;
+    text-align: center;
+    font-size: larger;
+    margin-top: 20px;
+    
+    
   }
   
-  .cardg::before,
-  .cardg::after {
+  .card_box:hover {
+    transform: scale(0.9);
+  }
+  
+  .card_box span {
     position: absolute;
-    content: "";
-    width: 20%;
-    height: 20%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-    background-color: rgb(154, 221, 168);
-    transition: all 0.5s;
   }
   
-  .cardg::before {
-    top: 0;
-    right: 0;
-    border-radius: 0 15px 0 100%;
+  .card_box span::before {
+    content: 'Premium';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
   }
   
-  .cardg::after {
+  .card_box span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
     bottom: 0;
     left: 0;
-    border-radius: 0 100%  0 15px;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
   }
-  
-  .cardg:hover::before,
-  .cardg:hover:after {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    transition: all 0.5s;
-  }
-  
-  .cardg:hover:after {
-    content: "More";
+
+  .prem{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+   
+
+    
   }
