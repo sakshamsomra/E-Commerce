@@ -17,8 +17,8 @@
     flex-direction: column;
     gap: 35px;
     border-radius: 15px;
-    background: #e3e3e3;
-    box-shadow: 16px 16px 32px #c8c8c8,
+    background: #eff8e2;
+    box-shadow: 16px 16px 32px #706f6f,
           -16px -16px 32px ;
     border-radius: 8px;
 
@@ -27,6 +27,7 @@
     transform: translate(0%, 30%);
     scale: 110%;
     margin: auto;
+    
 
 
     
