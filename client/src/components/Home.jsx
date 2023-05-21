@@ -84,14 +84,12 @@ export default function Home() {
 
             <Navbar />
 
-            <div class="cont">
-                <div class="cardg"> <img src={pizza} alt="" /> </div>
-                <div class="cardg"><img src={burger} alt="" /></div>
-                <div class="cardg"> <img src={dosa} alt="" /></div>
-                <div class="cardg"><img src={shake} alt="" /></div>
-                <div class="cardg"><img src={indian} alt="" /></div>
-
-
+            <div class="container1">
+                <div class="card_box">
+                    <p class="prem">Buy Premium for exclusive discounts</p>
+                    
+                    <span></span>
+                </div>
             </div>
 
 
