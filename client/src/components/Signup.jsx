@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
-
+import { Link, redirect, Route, useNavigate } from "react-router-dom";
 
 export default function Signup() {
 
     const [email, setEmail] = useState("")
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-
+    const navigate = useNavigate();
 
 
     const submitForm = (event) => {
@@ -23,6 +23,7 @@ export default function Signup() {
 
         axios.post("https://e-commerce-server-lake.vercel.app/api/users", form).then(() => {
             alert('success for insert');
+            navigate("/");
         })
 
     }
