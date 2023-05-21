@@ -1,8 +1,14 @@
 body{
 
   background-image: url("./components/photos/back.jpg");
+  /* background: linear-gradient( #b3e4a0, #fffefe)  !important; */
   
-  background-repeat: no-repeat;
+  
+  background-repeat: no-repeat !important;
+  
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
  
 }
 
