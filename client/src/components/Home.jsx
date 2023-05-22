@@ -81,7 +81,11 @@ export default function Home() {
         <>
 
 
+
+
             <Navbar />
+
+        
 
             <div class="container1">
                 <div class="card_box">
@@ -91,13 +95,15 @@ export default function Home() {
                 </div>
             </div>
 
-           
+
+
 
             <div className="line">Order Now</div>
 
 
 
-          <div class="holder">
+
+           <div class="holder">
 
            {
                 list && list.length > 0
@@ -105,6 +111,9 @@ export default function Home() {
                     list.map((val) => {
 
                         return (
+
+
+
 
 
                             <div class="card" style={{ width: "18rem" }}>
@@ -116,7 +125,7 @@ export default function Home() {
 
 
                                 </div>
-                                <button class="btn btn-success" onClick={() => { { submitForm(val.prod_name, val.price, val.qty, val.id); dispatch(actionCreators.addMoney(val.price)) } }}> Ad to cart</button>
+                                <button class="btn btn-success" onClick={() => { { submitForm(val.prod_name, val.price, val.qty, val.id); dispatch(actionCreators.addMoney(val.price)) } }}> Add to cart</button>
                             </div>
 
 
@@ -129,7 +138,9 @@ export default function Home() {
             }
 
 
-          </div>
+           </div>
+
+            
 
 
 
