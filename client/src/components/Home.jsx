@@ -97,7 +97,7 @@ export default function Home() {
 
 
 
-           <div class="holder">
+          <div class="holder">
 
            {
                 list && list.length > 0
@@ -129,7 +129,7 @@ export default function Home() {
             }
 
 
-           </div>
+          </div>
 
 
 
