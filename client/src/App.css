@@ -79,6 +79,12 @@ border: none !important;
   background-color: #86af73 !important;
 }
 
+.holder{
+ 
+  flex-wrap: wrap; 
+  
+}
+
 .card-img-top{
   transition: 0.5s;
 
