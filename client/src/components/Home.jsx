@@ -116,7 +116,7 @@ export default function Home() {
 
 
                                 </div>
-                                <button class="btn btn-success" onClick={() => { { submitForm(val.prod_name, val.price, val.qty, val.id); dispatch(actionCreators.addMoney(val.price)) } }}> Add to cart</button>
+                                <button class="btn btn-success" onClick={() => { { submitForm(val.prod_name, val.price, val.qty, val.id); dispatch(actionCreators.addMoney(val.price)) } }}> Ad to cart</button>
                             </div>
 
 
