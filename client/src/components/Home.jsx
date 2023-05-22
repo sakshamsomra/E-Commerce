@@ -81,8 +81,6 @@ export default function Home() {
         <>
 
 
-
-
             <Navbar />
 
             <div class="container1">
@@ -93,17 +91,15 @@ export default function Home() {
                 </div>
             </div>
 
-
            
 
             <div className="line">Order Now</div>
 
 
 
+           <div class="holder">
 
-
-
-            {
+           {
                 list && list.length > 0
                     ?
                     list.map((val) => {
@@ -111,12 +107,7 @@ export default function Home() {
                         return (
 
 
-
-
-
                             <div class="card" style={{ width: "18rem" }}>
-
-
 
                                 <img src={pan} class="card-img-top" alt="..." />
                                 <div class="card-body">
@@ -136,6 +127,9 @@ export default function Home() {
 
 
             }
+
+
+           </div>
 
 
 
