@@ -12,6 +12,7 @@ import burger from './photos/burger.png'
 import dosa from './photos/dosa.png'
 import shake from './photos/shake.png'
 import indian from './photos/indian.png'
+import pan from './photos/pan.jpg'
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../state/index";
@@ -117,7 +118,7 @@ export default function Home() {
 
 
 
-                                <img src={fruit} class="card-img-top" alt="..." />
+                                <img src={pan} class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">{val.prod_name}</h5>
                                     <p class="card-text">{val.price} Rs.</p>
