@@ -94,6 +94,99 @@ export default function Home() {
                     <span></span>
                 </div>
             </div>
+        
+        
+        <div className="line">Discounts</div>
+
+            <div class="master">
+
+            <div class="cardshow">
+                <div class="card-top">
+                    <p class="card__title">60% off on pizza</p>
+                    <div class="rating">
+                        
+                    </div>
+                </div>
+                <div class="card__info">
+                    <p class="episode__num">46Ep</p>
+                    <p class="episode__type">Fantasy</p>
+                </div>
+                <div class="card__btns">
+                    <button class="add-btn">+</button>
+                    <button class="watch-btn">watch</button>
+                </div>
+            </div>
+
+            <div class="cardshow">
+                <div class="card-top">
+                    <p class="card__title">40% off on shakes</p>
+                    <div class="rating">
+                       
+                    </div>
+                </div>
+                <div class="card__info">
+                    <p class="episode__num">46Ep</p>
+                    <p class="episode__type">Fantasy</p>
+                </div>
+                <div class="card__btns">
+                    <button class="add-btn">+</button>
+                    <button class="watch-btn">watch</button>
+                </div>
+            </div>
+
+            <div class="cardshow">
+                <div class="card-top">
+                    <p class="card__title">20% off on cakes</p>
+                    <div class="rating">
+                        
+                    </div>
+                </div>
+                <div class="card__info">
+                    <p class="episode__num">46Ep</p>
+                    <p class="episode__type">Fantasy</p>
+                </div>
+                <div class="card__btns">
+                    <button class="add-btn">+</button>
+                    <button class="watch-btn">watch</button>
+                </div>
+            </div>
+
+            <div class="cardshow">
+                <div class="card-top">
+                    <p class="card__title">50% off on tikka</p>
+                    <div class="rating">
+                        
+                    </div>
+                </div>
+                <div class="card__info">
+                    <p class="episode__num">46Ep</p>
+                    <p class="episode__type">Fantasy</p>
+                </div>
+                <div class="card__btns">
+                    <button class="add-btn">+</button>
+                    <button class="watch-btn">watch</button>
+                </div>
+            </div>
+
+
+            <div class="cardshow">
+                <div class="card-top">
+                    <p class="card__title">60% off on pizza</p>
+                    <div class="rating">
+                        
+                    </div>
+                </div>
+                <div class="card__info">
+                    <p class="episode__num">46Ep</p>
+                    <p class="episode__type">Fantasy</p>
+                </div>
+                <div class="card__btns">
+                    <button class="add-btn">+</button>
+                    <button class="watch-btn">watch</button>
+                </div>
+            </div>
+
+            </div>
 
 
 
