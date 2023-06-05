@@ -166,4 +166,11 @@ border: none !important;
   width: 100%;
 }
 
+#searchterm{
+  width: 40%;
+  margin: auto !important;
+  margin-bottom: 200px;
+}
+
+
 
