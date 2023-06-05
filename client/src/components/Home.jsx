@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">more</button>
+                    <button class="watch-btn" onClick={() => setSearchterm("pizza")}>more</button>
                 </div>
             </div>
 
@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">more</button>
+                    <button class="watch-btn" onClick={() => setSearchterm("shake")}>more</button>
                 </div>
             </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">more</button>
+                    <button class="watch-btn" onClick={() => setSearchterm("cake")}>more</button>
                 </div>
             </div>
 
@@ -173,14 +173,14 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">more</button>
+                    <button class="watch-btn" onClick={() => setSearchterm("tikka")}>more</button>
                 </div>
             </div>
 
 
             <div class="cardshow">
                 <div class="card-top">
-                    <p class="card__title">60% off on pizza</p>
+                    <p class="card__title">60% off on pasta</p>
                     <div class="rating">
                         
                     </div>
@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">more</button>
+                    <button class="watch-btn" onClick={() => setSearchterm("pasta")}>more</button>
                 </div>
             </div>
 
