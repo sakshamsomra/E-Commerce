@@ -20,6 +20,8 @@ import { useSelector } from "react-redux";
 
 
 export default function Home() {
+    
+    const [searchterm, setSearchterm] = useState("");
 
     const dispatch = useDispatch();
 
@@ -84,6 +86,13 @@ export default function Home() {
 
 
             <Navbar />
+        
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" id="searchterm" placeholder="Search" aria-label="Search" onChange={(e) => {
+                    setSearchterm(e.target.value);
+                }} />
+
+            </form>
 
         
 
@@ -113,7 +122,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">watch</button>
+                    <button class="watch-btn">more</button>
                 </div>
             </div>
 
@@ -130,7 +139,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">watch</button>
+                    <button class="watch-btn">more</button>
                 </div>
             </div>
 
@@ -147,7 +156,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">watch</button>
+                    <button class="watch-btn">more</button>
                 </div>
             </div>
 
@@ -164,7 +173,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">watch</button>
+                    <button class="watch-btn">more</button>
                 </div>
             </div>
 
@@ -182,7 +191,7 @@ export default function Home() {
                 </div>
                 <div class="card__btns">
                     <button class="add-btn">+</button>
-                    <button class="watch-btn">watch</button>
+                    <button class="watch-btn">more</button>
                 </div>
             </div>
 
@@ -201,7 +210,10 @@ export default function Home() {
            {
                 list && list.length > 0
                     ?
-                    list.map((val) => {
+                    list.filter((val) => {
+                            return searchterm.toLowerCase() === '' ? val : val.category.toLowerCase().includes(searchterm)
+    
+                        }).map((val) => {
 
                         return (
 
