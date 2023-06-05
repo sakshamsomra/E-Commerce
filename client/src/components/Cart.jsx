@@ -35,7 +35,7 @@ export default function Cart() {
 
             <div class="master-container">
                 <div class="card cart" id="cardcart">
-                    <label class="title">Your cart</label>{
+                    {
                         list && list.length > 0
                             ?
                             list.map((val) => {
@@ -93,7 +93,7 @@ export default function Cart() {
                 </div>
 
                 <div class="card checkout" id="cardcheck">
-                    <label class="title">Checkout</label>
+                    
                     <div class="details">
                         <span>Your cart subtotal:</span>
                         <span>47.99$</span>
