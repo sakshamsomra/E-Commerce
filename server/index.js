@@ -170,8 +170,8 @@ app.get("/api/login", (req,res) => {
 })
 
 app.post("/api/login",upload.single('file'), (req, res) => {
-  username = req.body.username;
-  password = req.body.password;
+  const username = req.body.username;
+  const password = req.body.password;
 
 
   conn.query("SELECT * FROM user WHERE username = ? AND password = ?", 
