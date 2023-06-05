@@ -74,6 +74,7 @@ export default function Sell() {
               <option value="Kulche">Kulche</option>
               <option value="Shake">Shake</option>
               <option value="Cake">Cake</option>
+              <option value="Pasta">Pasta</option>
             </select>
 
 
