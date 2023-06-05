@@ -68,9 +68,7 @@ export default function Navbar() {
                             </li>
 
 
-                            <li class="nav-item">
-                                <Link class="nav-link" id="log" to={'/items'}> <img id="image" src={items} alt="" /> Items</Link>
-                            </li>
+                            
 
 
 
