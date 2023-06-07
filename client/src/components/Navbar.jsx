@@ -72,18 +72,7 @@ export default function Navbar() {
 
 
 
-                            <li class="nav-item dropdown">
-                                <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img id="image" src={category} alt="" /> Categories
-                                </Link>
-
-                                <ul class="dropdown-menu">
-                                    <li><Link class="dropdown-item" href="#">Action</Link></li>
-                                    <li><Link class="dropdown-item" href="#">Another action</Link></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><Link class="dropdown-item" href="#">Something else here</Link></li>
-                                </ul>
-                            </li>
+                      
 
 
 
