@@ -40,7 +40,7 @@ app.set('trust proxy', 1); // Enable trust proxy
 app.use(session({
   key: "userId",
   secret: 'secret',
-  resave: true,
+  resave: false,
   saveUninitialized: true,
   cookie: {
       secure: true,
