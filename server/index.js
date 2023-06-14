@@ -6,7 +6,6 @@ const session = require('express-session')
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const { query } = require('express');
 const saltRounds = 10;
 const path = require('path')
 const multer = require("multer");
