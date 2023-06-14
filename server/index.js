@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
+    key: "userId",
     secret: process.env.SESSION_SECRET, // Session secret
     resave: false,
     saveUninitialized: true,
