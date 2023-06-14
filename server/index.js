@@ -36,13 +36,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-    key: "userId",
-    secret: process.env.SESSION_SECRET, // Session secret
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-      secure: true,
-      maxAge: 24 * 60 * 60 * 1000, // 24 hours (adjust as needed)
+  key: "userId",
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
 }));
 
 
