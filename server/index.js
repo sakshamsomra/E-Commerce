@@ -48,6 +48,7 @@ app.use(session({
       maxAge: 3600000,
       
     },
+  store: new session.MemoryStore()
 }));
 
 
