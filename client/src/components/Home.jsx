@@ -20,6 +20,7 @@ import { useSelector } from "react-redux";
 
 
 export default function Home() {
+    axios.defaults.withCredentials = true;
     
     const [searchterm, setSearchterm] = useState("");
 
@@ -63,7 +64,7 @@ export default function Home() {
 
 
 
-    axios.defaults.withCredentials = true;
+    
 
     useEffect(() => {
 
