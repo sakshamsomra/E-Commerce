@@ -41,7 +41,7 @@ app.use(session({
   key: "userId",
   secret: 'secret',
   resave: true,
-  saveUninitialized: false,
+  saveUninitialized: true,
   cookie: {
       secure: true,
       sameSite: 'none',
