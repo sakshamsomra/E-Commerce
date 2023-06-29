@@ -42,8 +42,7 @@ const conn = mysql.createConnection({
   database: 'somradata',
   port: '3306',
   insecureAuth : true,
-  checkExpirationInterval: 900000, // How frequently expired sessions will be cleared (in milliseconds)
-  expiration: 86400000
+ 
 
 });
 
