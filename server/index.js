@@ -12,7 +12,7 @@ const multer = require("multer");
 const coolieParser = require('cookie-parser');
 const cookieParser = require('cookie-parser');
 // app.use('/Images', express.static('Images'));
-
+const MySQLStore = require('express-mysql-session')(session);
 const emailValidator = require('email-validator');
 
 const isValidEmail = emailValidator.validate('example@email.com');
@@ -35,6 +35,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 
+const conn = mysql.createConnection({
+  host: 'db4free.net',
+  user: 'saksham',
+  password: 'chicago1@',
+  database: 'somradata',
+  port: '3306',
+  insecureAuth : true,
+  checkExpirationInterval: 900000, // How frequently expired sessions will be cleared (in milliseconds)
+  expiration: 86400000
+
+});
+
+const sessionStore = new MySQLStore(conn);
+
+
+
 app.set('trust proxy', 1); // Enable trust proxy
 
 app.use(session({
@@ -48,19 +64,8 @@ app.use(session({
       maxAge: 3600000,
       
     },
-  store: new session.MemoryStore()
+  store: sessionStore
 }));
-
-
-const conn = mysql.createConnection({
-  host: 'db4free.net',
-  user: 'saksham',
-  password: 'chicago1@',
-  database: 'somradata',
-  port: '3306',
-  insecureAuth : true
-
-});
 
 conn.connect((err) => {
   if (err) throw err; 
