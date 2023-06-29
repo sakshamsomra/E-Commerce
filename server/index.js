@@ -46,8 +46,6 @@ const conn = mysql.createConnection({
 
 });
 
-const sessionStore = new MySQLStore(conn);
-
 
 
 app.set('trust proxy', 1); // Enable trust proxy
@@ -63,7 +61,7 @@ app.use(session({
       maxAge: 3600000,
       
     },
-  store: sessionStore
+
 }));
 
 conn.connect((err) => {
