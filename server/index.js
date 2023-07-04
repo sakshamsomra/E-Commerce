@@ -55,12 +55,7 @@ app.use(session({
   secret: 'secret',
   resave: true,
   saveUninitialized: true,
-  cookie: {
-      secure: true,
-      sameSite: 'none',
-      maxAge: 3600000,
-      
-    },
+
 
 }));
 
