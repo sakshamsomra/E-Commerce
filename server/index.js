@@ -6,12 +6,14 @@ const session = require('express-session')
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const { query } = require('express');
 const saltRounds = 10;
 const path = require('path')
 const multer = require("multer");
 const coolieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 // app.use('/Images', express.static('Images'));
-const MySQLStore = require('express-mysql-session')(session);
+
 const emailValidator = require('email-validator');
 
 const isValidEmail = emailValidator.validate('example@email.com');
@@ -33,6 +35,13 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
+app.use(session({
+  key: "userId",
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+
 
 const conn = mysql.createConnection({
   host: 'db4free.net',
@@ -40,29 +49,9 @@ const conn = mysql.createConnection({
   password: 'chicago1@',
   database: 'somradata',
   port: '3306',
-  insecureAuth : true,
- 
+  insecureAuth : true
 
 });
-
-
-
-app.set('trust proxy', 1); // Enable trust proxy
-
-app.use(session({
-  key: "userId",
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true,
-  cookie: {
-      secure: true,
-      sameSite: 'none',
-      maxAge: 3600000,
-      
-    },
-
-
-}));
 
 conn.connect((err) => {
   if (err) throw err; 
@@ -209,6 +198,16 @@ app.post("/api/login",upload.single('file'), (req, res) => {
 
 
 app.post("/api/logout",upload.single('file'), (req,res) => {
+
+
+  let sqlQuery = "DELETE FROM cart";
+
+  let query = conn.query(sqlQuery, (err, results) => {
+    
+    
+  });
+
+
 
   req.session.destroy(function(err) {
     if(err) {
