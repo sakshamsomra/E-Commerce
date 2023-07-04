@@ -10,7 +10,6 @@ const saltRounds = 10;
 const path = require('path')
 const multer = require("multer");
 const coolieParser = require('cookie-parser');
-const cookieParser = require('cookie-parser');
 // app.use('/Images', express.static('Images'));
 const MySQLStore = require('express-mysql-session')(session);
 const emailValidator = require('email-validator');
