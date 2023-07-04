@@ -50,6 +50,7 @@ const conn = mysql.createConnection({
 app.set('trust proxy', 1); // Enable trust proxy
 
 app.use(session({
+  key: "userId",
   secret: 'secret',
   resave: true,
   saveUninitialized: true,
