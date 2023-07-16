@@ -13,13 +13,18 @@ const multer = require("multer");
 const coolieParser = require('cookie-parser');
 const cookieParser = require('cookie-parser');
 // app.use('/Images', express.static('Images'));
-
+const MySQLStore = require('express-mysql-session')(session);
 const emailValidator = require('email-validator');
 
 const isValidEmail = emailValidator.validate('example@email.com');
 
 
-
+const sessionStore = new MySQLStore({
+  host: 'your-mysql-host',
+  user: 'your-mysql-username',
+  password: 'your-mysql-password',
+  database: 'your-mysql-database',
+});
 
 
 app.use(bodyParser.json());
@@ -46,6 +51,7 @@ app.use(session({
       secure: true,
       sameSite: 'none',
       maxAge: 3600000,
+     store: sessionStore,
       
     },
 }));
