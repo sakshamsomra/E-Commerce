@@ -19,10 +19,10 @@ const emailValidator = require('email-validator');
 const isValidEmail = emailValidator.validate('example@email.com');
 
 const sessionStore = new MySQLStore({
-  host: process.env.db4free.net,
-  user: process.env.saksham,
-  password: process.env.chicago1@,
-  database: process.env.somradata,
+  host: 'db4free.net',
+  user: 'saksham',
+  password: 'chicago1@',
+  database: 'somradata',
 });
 
 
