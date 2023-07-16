@@ -11,7 +11,7 @@ const saltRounds = 10;
 const path = require('path')
 const multer = require("multer");
 const coolieParser = require('cookie-parser');
-const cookieParser = require('cookie-parser');
+
 // app.use('/Images', express.static('Images'));
 
 const emailValidator = require('email-validator');
@@ -23,7 +23,10 @@ const isValidEmail = emailValidator.validate('example@email.com');
 
 
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin: ["https://e-commerce-phi-ten.vercel.app"],
   methods: ["GET", "POST"],
@@ -31,9 +34,8 @@ app.use(cors({
 }));
 
 
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.urlencoded({ extended: true }));
+
+
 
 app.set('trust proxy', 1); // Enable trust proxy
 
