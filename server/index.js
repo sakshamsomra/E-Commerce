@@ -20,10 +20,10 @@ const isValidEmail = emailValidator.validate('example@email.com');
 
 
 const sessionStore = new MySQLStore({
-  host: 'your-mysql-host',
-  user: 'your-mysql-username',
-  password: 'your-mysql-password',
-  database: 'your-mysql-database',
+  host: 'db4free.net',
+  user: 'saksham
+  password: 'chicago1@',
+  database: 'somradata',
 });
 
 
