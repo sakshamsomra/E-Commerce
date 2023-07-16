@@ -51,7 +51,7 @@ app.use(session({
       secure: true,
       sameSite: 'none',
       maxAge: 3600000,
-    
+      store: sessionStore,
       
     },
 }));
